@@ -1,0 +1,57 @@
+#
+# The client reads this property to create the reference to the
+# "hello" object in the server.
+#
+bulbulator1.Proxy=bulbulator/bulbulator1: tcp -h 127.0.0.2 -p 10000: udp -h 127.0.0.2 -p 10000
+bulbulator2.Proxy=bulbulator/bulbulator2: tcp -h 127.0.0.2 -p 10001 -z
+
+smartLightBulb.Proxy=light/smartLight: tcp -h 127.0.0.2 -p 10000 -z
+smarterLightBulb.Proxy=light/smarterLight: tcp -h 127.0.0.2 -p 10000 -z
+theSmartestLightBulb.Proxy=light/theSmartestLight: tcp -h 127.0.0.2 -p 10000 -z
+
+smartOven.Proxy=oven/smartOven: tcp -h 127.0.0.2 -p 10001 -z
+smarterOven.Proxy=oven/smarterOven: tcp -h 127.0.0.2 -p 10001 -z
+theSmartestOven.Proxy=oven/theSmartestOven: tcp -h 127.0.0.2 -p 10001 -z
+
+connection1.Proxy=connection/connectionServant: tcp -h 127.0.0.2 -p 10000: udp -h 127.0.0.2 -p 10000
+connection2.Proxy=connection/connectionServant: tcp -h 127.0.0.2 -p 10001: udp -h 127.0.0.2 -p 10001
+
+#
+# Warn about connection exceptions.
+#
+Ice.Warn.Connections=1
+Ice.ACM.Timeout=10
+
+#
+# Network Tracing
+#
+# 0 = no network tracing
+# 1 = trace connection establishment and closure
+# 2 = like 1, but more detailed
+# 3 = like 2, but also trace data transfer
+#
+#Ice.Trace.Network=3
+
+#
+# Protocol Tracing
+#
+# 0 = no protocol tracing
+# 1 = trace protocol messages
+#
+#Ice.Trace.Protocol=1
+
+#
+# Security Tracing
+#
+# 0 = no security tracing
+# 1 = trace messages
+#
+#IceSSL.Trace.Security=1
+
+#
+# SSL Configuration
+#
+#Ice.Plugin.IceSSL=IceSSL.PluginFactory
+#IceSSL.DefaultDir=certs
+#IceSSL.Keystore=client.jks
+#IceSSL.Password=password

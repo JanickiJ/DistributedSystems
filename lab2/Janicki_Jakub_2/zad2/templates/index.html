@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Town information</title>
+</head>
+<body>
+<form action="/api/v1/town_info" method="get">
+    <label>Town information</label>
+    <br>
+    <label for="town_name">TownName:</label>
+    <input type="text" name="town_name" id="town_name">
+    <br>
+    <button type="submit">Submit</button>
+</form>
+<p>{{ status }}</p>
+</body>
+</html>

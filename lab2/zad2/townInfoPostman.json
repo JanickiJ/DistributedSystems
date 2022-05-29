@@ -1,0 +1,352 @@
+{
+	"info": {
+		"_postman_id": "d36a25dd-a6e8-43b0-8c15-51eaa5e893d8",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "airPollution",
+			"item": [
+				{
+					"name": "air_pollution",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/html",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local_host}}/api/v1/town_info/air_pollution/Czchów",
+							"host": [
+								"{{local_host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"town_info",
+								"air_pollution",
+								"Czchów"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "air_pollution_station",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gios.gov.pl/pjp-api/rest/station/findAll",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gios",
+								"gov",
+								"pl"
+							],
+							"path": [
+								"pjp-api",
+								"rest",
+								"station",
+								"findAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "air_pollution_sensors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gios.gov.pl/pjp-api/rest/station/sensors/14",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gios",
+								"gov",
+								"pl"
+							],
+							"path": [
+								"pjp-api",
+								"rest",
+								"station",
+								"sensors",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "air_pollution_measurements",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gios.gov.pl/pjp-api/rest/data/getData/92",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gios",
+								"gov",
+								"pl"
+							],
+							"path": [
+								"pjp-api",
+								"rest",
+								"data",
+								"getData",
+								"92"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "autoFill",
+			"item": [
+				{
+					"name": "auto_fill",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/html",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local_host}}/api/v1/town_info/auto_fill/Czchów",
+							"host": [
+								"{{local_host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"town_info",
+								"auto_fill",
+								"Czchów"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "auto_fill_requester",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.weatherapi.com/v1/search.json?key=fee73ee5ebba46bb835204043221603&q=Czchów",
+							"protocol": "http",
+							"host": [
+								"api",
+								"weatherapi",
+								"com"
+							],
+							"path": [
+								"v1",
+								"search.json"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "fee73ee5ebba46bb835204043221603"
+								},
+								{
+									"key": "q",
+									"value": "Czchów"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dialog",
+			"item": [
+				{
+					"name": "dialog",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/html",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local_host}}/api/v1/",
+							"host": [
+								"{{local_host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "options",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/html",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local_host}}/api/v1/town_info/?town_name=Czchów",
+							"host": [
+								"{{local_host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"town_info",
+								""
+							],
+							"query": [
+								{
+									"key": "town_name",
+									"value": "Czchów"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "weather",
+			"item": [
+				{
+					"name": "weather",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/html",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local_host}}/api/v1/weather/Czchów",
+							"host": [
+								"{{local_host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"weather",
+								"Czchów"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "weather_requester",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://danepubliczne.imgw.pl/api/data/synop/station/krakow",
+							"protocol": "https",
+							"host": [
+								"danepubliczne",
+								"imgw",
+								"pl"
+							],
+							"path": [
+								"api",
+								"data",
+								"synop",
+								"station",
+								"krakow"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "youtube",
+			"item": [
+				{
+					"name": "youtube",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/html",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local_host}}/api/v1/town_info/youtube/Czchów",
+							"host": [
+								"{{local_host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"town_info",
+								"youtube",
+								"Czchów"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
